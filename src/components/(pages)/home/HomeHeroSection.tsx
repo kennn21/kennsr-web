@@ -1,3 +1,5 @@
+import { InstagramIcon, TiktokIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 export default function HomeHeroSection() {
   return (
     <div
@@ -24,6 +26,14 @@ export default function HomeHeroSection() {
           <p className="mt-2 inline-block text-lg tracking-widest text-gray-300 uppercase">
             Fitness Model | Aesthetics & Simpleness
           </p>
+          <div className="mt-2 flex gap-2">
+            <a href="https://www.instagram.com/kenn.sr/" target="_blank">
+              <HugeiconsIcon icon={InstagramIcon} />
+            </a>
+            <a href="https://www.tiktok.com/@kenn.sr" target="_blank">
+              <HugeiconsIcon icon={TiktokIcon} />
+            </a>
+          </div>
         </div>
       </div>
     </div>
