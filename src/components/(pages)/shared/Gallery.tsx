@@ -1,12 +1,15 @@
 'use client'
 
-import { useGallery } from '@/app/hooks/useGallery'
+import { ListBlobResultBlob } from '@vercel/blob'
 import Image from 'next/image'
-import { FC, useState, useCallback } from 'react'
+import { FC, useCallback, useState } from 'react'
 import ImageViewer from 'react-simple-image-viewer'
 
-export const GallerySection: FC = () => {
-  const { images } = useGallery()
+type GalleryProps = {
+  images: ListBlobResultBlob[]
+}
+
+export const Gallery: FC<GalleryProps> = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0)
   const [isViewerOpen, setIsViewerOpen] = useState(false)
 
