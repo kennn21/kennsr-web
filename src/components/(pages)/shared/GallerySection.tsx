@@ -1,18 +1,32 @@
 'use client'
+
 import { useGallery } from '@/app/hooks/useGallery'
 import Image from 'next/image'
-import { FC } from 'react'
+import { FC, useState, useCallback } from 'react'
+import ImageViewer from 'react-simple-image-viewer'
 
 export const GallerySection: FC = () => {
   const { images } = useGallery()
+  const [currentImage, setCurrentImage] = useState(0)
+  const [isViewerOpen, setIsViewerOpen] = useState(false)
+
+  const openImageViewer = useCallback((index: number) => {
+    setCurrentImage(index)
+    setIsViewerOpen(true)
+  }, [])
+
+  const closeImageViewer = () => {
+    setIsViewerOpen(false)
+  }
 
   return (
     <section className="container mx-auto py-8">
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {images.map((img) => (
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {images.map((img, index) => (
           <div
             key={img.pathname}
-            className="relative aspect-square cursor-pointer overflow-hidden rounded-lg shadow-md"
+            className="relative aspect-square cursor-pointer overflow-hidden shadow-md"
+            onClick={() => openImageViewer(index)}
           >
             <Image
               src={img.url}
@@ -23,6 +37,17 @@ export const GallerySection: FC = () => {
           </div>
         ))}
       </div>
+
+      {isViewerOpen && (
+        <ImageViewer
+          src={images.map((img) => img.url)}
+          currentIndex={currentImage}
+          onClose={closeImageViewer}
+          disableScroll={false}
+          backgroundStyle={{ backgroundColor: 'rgba(0,0,0,0.9)' }}
+          closeOnClickOutside={true}
+        />
+      )}
     </section>
   )
 }

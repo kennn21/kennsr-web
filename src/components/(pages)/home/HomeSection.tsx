@@ -9,7 +9,7 @@ export default function HomeSection() {
         <HomeHeroSection />
         <HomeInfoSection />
         <GallerySection />
-        <div className="absolute -right-20 bottom-0 z-[-1] h-[100dvw] w-[100dvw] rounded-full bg-yellow-500/20 blur-3xl"></div>
+        <div className="absolute -right-20 bottom-0 z-[-1] h-[20dvw] w-[20dvw] rounded-full bg-yellow-500/20 blur-3xl"></div>
       </div>
     </div>
   )

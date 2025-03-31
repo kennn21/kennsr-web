@@ -17,7 +17,7 @@ const HomeInfoSection: FC = () => {
       <div className="relative w-full overflow-hidden rounded-lg p-8 shadow-2xl">
         <div className="relative">
           <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-12">
-            <div className="flex flex-col items-center border-b border-gray-700 pb-4 md:items-end md:border-r md:border-b-0 md:pr-6">
+            <div className="flex flex-col items-center border-b border-yellow-500 pb-4 md:items-end md:border-r md:border-b-0 md:pr-6">
               <span className="text-sm tracking-wider text-gray-400 uppercase">
                 Age
               </span>
@@ -31,7 +31,7 @@ const HomeInfoSection: FC = () => {
               <span className="mt-2 text-lg font-light">22 November 2003</span>
             </div>
 
-            <div className="flex flex-col items-center border-b border-gray-700 pb-4 md:items-end md:border-r md:border-b-0 md:pr-6">
+            <div className="flex flex-col items-center border-b border-yellow-500 pb-4 md:items-end md:border-r md:border-b-0 md:pr-6">
               <span className="text-sm tracking-wider text-gray-400 uppercase">
                 Height
               </span>

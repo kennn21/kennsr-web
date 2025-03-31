@@ -1,7 +1,7 @@
 export default function HomeHeroSection() {
   return (
     <div
-      className="h-screen w-full bg-cover bg-center"
+      className="h-screen w-full bg-cover bg-right"
       style={{
         backgroundImage: "url('/assets/images/hero_img.jpg')",
       }}
@@ -18,11 +18,11 @@ export default function HomeHeroSection() {
       {/* Your content goes here */}
       <div className="relative z-10 h-full p-8 pl-24">
         <div className="flex h-full w-1/2 flex-col items-start justify-center">
-          <h1 className="inline-block rounded-md bg-gradient-to-r from-gray-800 to-black px-4 py-2 text-5xl font-extrabold tracking-wide text-white uppercase shadow-lg">
+          <h1 className="inline-block rounded-md py-2 text-5xl font-extrabold tracking-wide text-white uppercase shadow-lg">
             kennsr
           </h1>
-          <p className="mt-2 text-lg tracking-widest text-gray-300 uppercase">
-            Fitness Model | Strength & Aesthetics
+          <p className="mt-2 inline-block text-lg tracking-widest text-gray-300 uppercase">
+            Fitness Model | Aesthetics & Simpleness
           </p>
         </div>
       </div>
