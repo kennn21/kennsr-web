@@ -9,12 +9,12 @@ const RateCard = () => {
     },
     {
       title: 'Shooting Video Vertikal (3-6 Jam)',
-      price: 'Rp 750.000',
+      price: 'Rp 600.000.000',
       description:
         'Video pendek format vertikal untuk media sosial. Jumlah video bebas',
     },
     {
-      title: 'Video dengan Script Dialog (3-6 Jam)',
+      title: 'Shooting Film dengan Script Dialog (3-6 Jam)',
       price: 'Mulai dari Rp 1.000.000',
       description: 'Produksi video dengan dialog sesuai kebutuhan.',
     },
