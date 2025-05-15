@@ -14,10 +14,14 @@ const GalleryTabs = [
     label: 'Body',
     value: 'body',
   },
+  {
+    label: 'Videoshoot',
+    value: 'videoshoot',
+  },
 ]
 
 export const GallerySection: FC = () => {
-  const { shotsImages, bodyImages } = useGallery()
+  const { shotsItems, bodyItems, videoshootItems } = useGallery()
 
   return (
     <Tabs defaultValue="shots" className="flex h-fit w-full justify-center">
@@ -33,10 +37,13 @@ export const GallerySection: FC = () => {
         ))}
       </TabsList>
       <TabsContent value="shots">
-        <Gallery images={shotsImages} />
+        <Gallery items={shotsItems} />
       </TabsContent>
       <TabsContent value="body">
-        <Gallery images={bodyImages} />
+        <Gallery items={bodyItems} />
+      </TabsContent>
+      <TabsContent value="videoshoot">
+        <Gallery items={videoshootItems} />
       </TabsContent>
     </Tabs>
   )

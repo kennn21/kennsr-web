@@ -5,9 +5,12 @@ import { ListBlobResultBlob } from '@vercel/blob'
 import { useEffect, useState } from 'react'
 
 export const useGallery = () => {
-  const [images, setImages] = useState<ListBlobResultBlob[]>([])
-  const [shotsImages, setShotsImages] = useState<ListBlobResultBlob[]>([])
-  const [bodyImages, setBodyImages] = useState<ListBlobResultBlob[]>([])
+  const [items, setImages] = useState<ListBlobResultBlob[]>([])
+  const [shotsItems, setShotsItems] = useState<ListBlobResultBlob[]>([])
+  const [bodyItems, setBodyItems] = useState<ListBlobResultBlob[]>([])
+  const [videoshootItems, setVideoshootItems] = useState<ListBlobResultBlob[]>(
+    []
+  )
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -20,7 +23,7 @@ export const useGallery = () => {
         setImages(fetchedImages)
       } catch (err) {
         console.error(err)
-        setError('Failed to load images.')
+        setError('Failed to load items.')
       } finally {
         setLoading(false)
       }
@@ -30,21 +33,23 @@ export const useGallery = () => {
   }, [])
 
   useEffect(() => {
-    console.log(images)
-    const fetchedShotsImages = images.filter((image) =>
+    const fetchedShotsImages = items.filter((image) =>
       image.pathname.startsWith('gallery/shots')
     )
-    setShotsImages(fetchedShotsImages)
+    setShotsItems(fetchedShotsImages)
 
-    const fetchedBodyImages = images.filter((image) =>
+    const fetchedBodyImages = items.filter((image) =>
       image.pathname.startsWith('gallery/body')
     )
-    setBodyImages(fetchedBodyImages)
-  }, [images])
+    setBodyItems(fetchedBodyImages)
 
-  useEffect(() => {
-    console.log(shotsImages)
-  }, [shotsImages])
+    const fetchedVideoshootItems = items.filter((image) =>
+      image.pathname.startsWith('gallery/videoshoot')
+    )
+    setVideoshootItems(fetchedVideoshootItems)
 
-  return { images, loading, error, shotsImages, bodyImages }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items])
+
+  return { items, loading, error, shotsItems, bodyItems, videoshootItems }
 }
