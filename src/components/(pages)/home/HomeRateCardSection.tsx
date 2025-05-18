@@ -4,18 +4,18 @@ const RateCard = () => {
   const rates = [
     {
       title: 'Foto Sesi (3-6 Jam)',
-      price: 'Rp 300.000',
+      price: 'Rp 300k',
       description: 'Pemotretan profesional untuk berbagai keperluan.',
     },
     {
       title: 'Shooting Video Vertikal (3-6 Jam)',
-      price: 'Rp 600.000.000',
+      price: 'Rp 600k',
       description:
         'Video pendek format vertikal untuk media sosial. Jumlah video bebas',
     },
     {
       title: 'Shooting Film dengan Script Dialog (3-6 Jam)',
-      price: 'Mulai dari Rp 1.000.000',
+      price: 'Starts from Rp 1000k',
       description: 'Produksi video dengan dialog sesuai kebutuhan.',
     },
   ]
