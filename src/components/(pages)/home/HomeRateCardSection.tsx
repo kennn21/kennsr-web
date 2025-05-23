@@ -3,19 +3,19 @@ import React from 'react'
 const RateCard = () => {
   const rates = [
     {
-      title: 'Foto Sesi (3-6 Jam)',
-      price: 'Rp 300k',
+      title: 'Foto Sesi',
+      price: 'Rp 300k/8hr',
       description: 'Pemotretan profesional untuk berbagai keperluan.',
     },
     {
-      title: 'Shooting Video Vertikal (3-6 Jam)',
-      price: 'Rp 600k',
+      title: 'Shooting Video Vertikal',
+      price: 'Rp 600k/8hr',
       description:
         'Video pendek format vertikal untuk media sosial. Jumlah video bebas',
     },
     {
-      title: 'Shooting Film dengan Script Dialog (3-6 Jam)',
-      price: 'Starts from Rp 1000k',
+      title: 'Shooting Video dengan Script Dialog',
+      price: 'Start from Rp 1000k/8hr',
       description: 'Produksi video dengan dialog sesuai kebutuhan.',
     },
   ]

@@ -18,10 +18,15 @@ const GalleryTabs = [
     label: 'Videoshoot',
     value: 'videoshoot',
   },
+  {
+    label: 'Photo Grid',
+    value: 'photo-grid',
+  },
 ]
 
 export const GallerySection: FC = () => {
-  const { shotsItems, bodyItems, videoshootItems } = useGallery()
+  const { shotsItems, bodyItems, videoshootItems, photoGridItems } =
+    useGallery()
 
   return (
     <Tabs defaultValue="shots" className="flex h-fit w-full justify-center">
@@ -44,6 +49,9 @@ export const GallerySection: FC = () => {
       </TabsContent>
       <TabsContent value="videoshoot">
         <Gallery items={videoshootItems} />
+      </TabsContent>
+      <TabsContent value="photo-grid">
+        <Gallery items={photoGridItems} />
       </TabsContent>
     </Tabs>
   )

@@ -11,6 +11,7 @@ export const useGallery = () => {
   const [videoshootItems, setVideoshootItems] = useState<ListBlobResultBlob[]>(
     []
   )
+  const [photoGridItems, setPhotoGridItems] = useState<ListBlobResultBlob[]>([])
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -48,8 +49,21 @@ export const useGallery = () => {
     )
     setVideoshootItems(fetchedVideoshootItems)
 
+    const fetchedPhotoGridItems = items.filter((image) =>
+      image.pathname.startsWith('gallery/photo-grid')
+    )
+    setPhotoGridItems(fetchedPhotoGridItems)
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items])
 
-  return { items, loading, error, shotsItems, bodyItems, videoshootItems }
+  return {
+    items,
+    loading,
+    error,
+    shotsItems,
+    bodyItems,
+    videoshootItems,
+    photoGridItems,
+  }
 }
