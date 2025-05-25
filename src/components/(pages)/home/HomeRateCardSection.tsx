@@ -3,19 +3,19 @@ import React from 'react'
 const RateCard = () => {
   const rates = [
     {
-      title: 'Foto Sesi',
-      price: 'Rp 300k/8hr',
+      title: 'Photo Session',
+      price: 'Starts from Rp 500k/8hr',
       description: 'Pemotretan profesional untuk berbagai keperluan.',
     },
     {
-      title: 'Shooting Video Vertikal',
-      price: 'Rp 600k/8hr',
+      title: 'Vertical Video Shoot',
+      price: 'Starts from Rp 1000k/8hr',
       description:
-        'Video pendek format vertikal untuk media sosial. Jumlah video bebas',
+        'Video pendek format vertikal untuk media sosial. Jumlah video bebas.',
     },
     {
-      title: 'Shooting Video dengan Script Dialog',
-      price: 'Start from Rp 1000k/8hr',
+      title: 'Video Shoot with Dialog Script',
+      price: 'Starts from Rp 2000k/8hr',
       description: 'Produksi video dengan dialog sesuai kebutuhan.',
     },
   ]
@@ -40,7 +40,7 @@ const RateCard = () => {
         ))}
       </div>
       <p className="mt-6 text-sm text-gray-400">
-        *Harga belum termasuk transport & konsumsi.
+        *Harga hanya estimasi. Dapat berubah sesuai kesepakatan.
       </p>
     </div>
   )
