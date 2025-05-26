@@ -13,7 +13,7 @@ const HomeInfoSection: FC = () => {
   const inches = Math.round(heightInches % 12)
 
   return (
-    <section className="flex w-full justify-center text-white">
+    <section className="flex w-full justify-center text-white" id="info">
       <div className="relative w-full overflow-hidden rounded-lg p-8 shadow-2xl">
         <div className="relative">
           <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-12">

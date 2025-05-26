@@ -21,7 +21,10 @@ const RateCard = () => {
   ]
 
   return (
-    <div className="z-1 flex min-h-screen flex-col items-center justify-center bg-black px-6 text-white">
+    <div
+      className="z-1 flex min-h-screen flex-col items-center justify-center bg-black px-6 text-white"
+      id="rate-card"
+    >
       <h1 className="mb-8 border-b border-yellow-500 pb-1 text-left text-xl font-bold tracking-wide uppercase">
         Rate Card - Kennsr
       </h1>

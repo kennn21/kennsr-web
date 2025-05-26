@@ -29,7 +29,11 @@ export const GallerySection: FC = () => {
     useGallery()
 
   return (
-    <Tabs defaultValue="shots" className="flex h-fit w-full justify-center">
+    <Tabs
+      defaultValue="shots"
+      className="flex h-fit w-full justify-center"
+      id="gallery"
+    >
       <TabsList className="flex w-full rounded-none">
         {GalleryTabs.map((tab) => (
           <TabsTrigger
